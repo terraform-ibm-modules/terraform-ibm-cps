@@ -1,122 +1,59 @@
-<!-- Update this title with a descriptive name. Use sentence case. -->
-# Terraform modules template project
+# IBM Cloud Pak System Software on Power VS
 
-<!--
-Update status and "latest release" badges:
-  1. For the status options, see https://terraform-ibm-modules.github.io/documentation/#/badge-status
-  2. Update the "latest release" badge to point to the correct module's repo. Replace "terraform-ibm-module-template" in two places.
--->
-[![Incubating (Not yet consumable)](https://img.shields.io/badge/status-Incubating%20(Not%20yet%20consumable)-red)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
-[![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-cps?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-cps/releases/latest)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+[![Graduated (Supported)](https://img.shields.io/badge/status-Graduated%20(Supported)-brightgreen?style=plastic)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-powervs-sap?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/releases/latest)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
-<!--
-Add a description of modules in this repo.
-Expand on the repo short description in the .github/settings.yml file.
-
-For information, see "Module names and descriptions" at
-https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines?id=module-names-and-descriptions
--->
-
-TODO: Replace this with a description of the modules in this repo.
+## Summary
+This repository contains deployable architecture solutions that help in deploying Power Virtual Server for IBM Cloud Pak System. The solutions are available in the IBM Cloud Catalog and can also be deployed without the catalog, except for a few solutions.
 
 
-<!-- The following content is automatically populated by the pre-commit hook -->
-<!-- BEGIN OVERVIEW HOOK -->
-## Overview
-* [terraform-ibm-cps](#terraform-ibm-cps)
-* [Examples](./examples)
-    * [Advanced example](./examples/advanced)
-    * [Basic example](./examples/basic)
-* [Contributing](#contributing)
-<!-- END OVERVIEW HOOK -->
+### IBM catalog solutions that require a Schematics workspace ID of [Power Virtual Server with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global)
+1. [IBM catalog PowerVS SAP Ready variation](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/tree/main/solutions/ibm-catalog/sap-ready-to-go)
+    - Creates and configures **one HANA instance, zero to several NetWeaver instances, and one optional ShareFS** with **RHEL or SLES OS** distribution. Creates a private subnet for SAP communication for the entire landscape.
+    - Optionally configures OS network management services (NTP, NFS, and DNS services) using Ansible Galaxy Collection from [IBM](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/): `power_linux_sap`
+    - Additionally tunes the instances according to SAP's best practices, which are fully ready for hosting SAP applications.
 
 
-<!--
-If this repo contains any reference architectures, uncomment the heading below and link to them.
-(Usually in the `/reference-architectures` directory.)
-See "Reference architecture" in the public documentation at
-https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines?id=reference-architecture
--->
-<!-- ## Reference architectures -->
 
 
-<!-- Replace this heading with the name of the root level module (the repo name) -->
-## terraform-ibm-cps
-
-### Usage
-
-<!--
-Add an example of the use of the module in the following code block.
-
-Use real values instead of "var.<var_name>" or other placeholder values
-unless real values don't help users know what to change.
--->
-
-```hcl
-
-```
-
-### Required IAM access policies
-
-<!-- PERMISSIONS REQUIRED TO RUN MODULE
-If this module requires permissions, uncomment the following block and update
-the sample permissions, following the format.
-Replace the sample Account and IBM Cloud service names and roles with the
-information in the console at
-Manage > Access (IAM) > Access groups > Access policies.
--->
-
-<!--
-You need the following permissions to run this module:
-
-- IAM services
-    - **Sample IBM Cloud** service
-        - `Editor` platform access
-        - `Manager` platform access
-- Account management services
-    - **Sample account management** service
-        - `Editor` platform access
--->
-
-<!-- NO PERMISSIONS FOR MODULE
-If no permissions are required for the module, uncomment the following
-statement instead the previous block.
--->
-
-<!-- No permissions are needed to run this module.-->
+## Reference architectures
+- [IBM Cloud Pak System Software for POWER](https://github.com/terraform-ibm-modules/terraform-ibm-cps/blob/gayathri-1/images/IBM%20Cloud%20Pak%20System%20Software%20for%20POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg)
 
 
-<!-- The following content is automatically populated by the pre-commit hook -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-### Requirements
+## Solutions
+|                                  Variation                                  | Available on IBM Catalog | Requires Schematics Workspace ID | Creates PowerVS with VPC landing zone | Creates PowerVS HANA Instance | Creates PowerVS NW Instances | Performs PowerVS OS Config | Performs PowerVS SAP Tuning | Install SAP software |
+|:---------------------------------------------------------------------------:|:------------------------:|:--------------------------------:|:-------------------------------------:|:-----------------------------:|:----------------------------:|:--------------------------:|:---------------------------:|:--------------------:|
+| [ IBM catalog PowerVS SAP Ready ]( ./solutions/ibm-catalog/sap-ready-to-go/ ) |    :heavy_check_mark:    |        :heavy_check_mark:        |                  N/A                  |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
+| [ IBM catalog SAP S/4HANA or BW/4HANA variation ]( ./solutions/ibm-catalog/sap-s4hana-bw4hana ) |    :heavy_check_mark:    |        :heavy_check_mark:        |                  N/A                  |               1               |            1            |     :heavy_check_mark:     |      :heavy_check_mark:     |          :heavy_check_mark:         |
+|             [ PowerVS SAP Ready ]( ./solutions/sap-ready-to-go/ )             |            N/A           |                N/A               |                  N/A                  |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
+|                      [ End-to-End ]( ./solutions/e2e/ )                     |            N/A           |                N/A               |           :heavy_check_mark:          |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
 
-### Modules
 
-No modules.
+## Required IAM access policies
 
-### Resources
+You need the following permissions to run this module.
 
-No resources.
+- Account Management
+    - **Resource Group** service
+        - `Viewer` platform access
+    - IAM Services
+        - **Workspace for Power Systems Virtual Server** service
+        - **Power Systems Virtual Server** service
+            - `Editor` platform access
+        - **VPC Infrastructure Services** service
+            - `Editor` platform access
+        - **Transit Gateway** service
+            - `Editor` platform access
+        - **Direct Link** service
+            - `Editor` platform access
 
-### Inputs
-
-No inputs.
-
-### Outputs
-
-No outputs.
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
-<!-- Leave this section as is so that your module has a link to local development environment set-up steps for contributors to follow -->
 ## Contributing
 
-You can report issues and request features for this module in GitHub issues in the module repo. See [Report an issue or request a feature](https://github.com/terraform-ibm-modules/.github/blob/main/.github/SUPPORT.md).
+You can report issues and request features for this module in GitHub issues in the module repository. See [Report an issue or request a feature](https://github.com/terraform-ibm-modules/.github/blob/main/.github/SUPPORT.md).
 
 To set up your local development environment, see [Local development setup](https://terraform-ibm-modules.github.io/documentation/#/local-dev-setup) in the project documentation.
+<!-- END CONTRIBUTING HOOK -->
