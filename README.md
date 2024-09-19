@@ -20,7 +20,7 @@ This repository contains deployable architecture solutions that help in deployin
 
 
 ## Reference architectures
-- [IBM Cloud Pak System Software for POWER](https://github.com/terraform-ibm-modules/terraform-ibm-cps/blob/gayathri-1/images/IBM%20Cloud%20Pak%20System%20Software%20for%20POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg)
+- [IBM Cloud Pak System Software for POWER](https://github.com/terraform-ibm-modules/terraform-ibm-cps/blob/gayathri-1/images/IBM_Cloud_Pak_System_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg)
 
 
 ## Solutions
