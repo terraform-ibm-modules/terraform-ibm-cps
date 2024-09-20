@@ -32,7 +32,7 @@ related_links:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Power Virtual Server for SAP HANA - variation 'SAP ready PowerVS'
+# Power Virtual Server for CPS - variation 'IBM Cloud Pak System Software for POWER'
 {: #sap-ready-to-go}
 {: toc-content-type="reference-architecture"}
 {: toc-industry="Technology"}
@@ -49,16 +49,16 @@ The transit gateway provide the network bridge between the IBM Power infrastruct
 The resulting SAP landscape leverages the services such as Activity Tracker, Cloud Object Storage, Key Management from the VPC landing zone and the network connectivity configuration provided by Power Virtual Server with VPC landing zone.
 
 ## Architecture diagram
-{: #sap-ready-to-go-architecture-diagram}
+{: #CPS-architecture-diagram}
 
-![Architecture diagram for 'SAP on Power Virtual Server for SAP HANA' - variation 'SAP ready PowerVS'.](deploy-arch-ibm-pvs-sap-ready-to-go.svg "Architecture diagram"){: caption="Figure 1. PowerVS instances prepared to run SAP in PowerVS workspace" caption-side="bottom"}{: external download="deploy-arch-ibm-pvs-sap-ready-to-go.svg"}
+![Architecture diagram for 'CPS on Power Virtual Server' - variation 'IBM Cloud Pak System Software for POWER'.](deploy-arch-ibm-CPS-pvs-inf-standard.svg "Architecture diagram"){: caption="Figure 1. PowerVS instances prepared to run CPS in PowerVS workspace" caption-side="bottom"}{: external download="deploy-arch-ibm-CPS-pvs-inf-standard.svg"}
 
 ## Design requirements
-{: #sap-ready-to-go-design-requirements}
+{: #CPS-design-requirements}
 
-![Design requirements for 'Power Virtual Server for SAP HANA' - variation 'SAP Ready PowerVS'](heat-map-deploy-arch-ibm-pvs-sap-ready-to-go.svg "Design requirements"){: caption="Figure 2. Scope of the solution requirements" caption-side="bottom"}
+![Design requirements for 'Power Virtual Server for CPS' - variation 'IBM Cloud Pak System Software for POWER'](heat-map-deploy-arch-ibm-pvs-sap-ready-to-go.svg "Design requirements"){: caption="Figure 2. Scope of the solution requirements" caption-side="bottom"}
 
-IBM Cloud Power Virtual Servers (PowerVS) is a public cloud offering that allows an enterprise to establish its own private IBM Power computing environment on shared public cloud infrastructure. Due to its scalability and resilience, PowerVS is the premium platform for SAP workloads in the cloud world. The reference architecture for 'Power Virtual Server for SAP HANA' - variation 'SAP ready PowerVS' is designed to provide PowerVS Linux instances prepared and configured for SAP HANA and SAP NetWeaver workloads according to the best practices and requirements using IBM Cloud® deployable architectures framework.
+IBM Cloud Power Virtual Servers (PowerVS) is a public cloud offering that allows an enterprise to establish its own private IBM Power computing environment on shared public cloud infrastructure. Due to its scalability and resilience, PowerVS is the premium platform for CPS Power workloads in the cloud world. The reference architecture for 'Power Virtual Server for CPS' - variation 'IBM Cloud Pak System Software for POWER' is designed to provide PowerVS Linux instances prepared and configured for CPS workloads according to the best practices and requirements using IBM Cloud® deployable architectures framework.
 
 ## Components
 {: #sap-ready-to-go-components}
