@@ -4,10 +4,10 @@
 #
 ################################################################
 
-variable "prerequisite_workspace_id" {
-  description = "IBM Cloud Schematics workspace ID of an existing 'Power Virtual Server with VPC landing zone' catalog solution. If you do not yet have an existing deployment, click [here](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global?) to create one."
-  type        = string
-}
+#variable "prerequisite_workspace_id" {
+ # description = "IBM Cloud Schematics workspace ID of an existing 'Power Virtual Server with VPC landing zone' catalog solution. If you do not yet have an existing deployment, click [here](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global?) to create one."
+  #type        = string
+#}
 
 variable "ibmcloud_cos_service_credentials" {
   description = "IBM Cloud Object Storage instance service credentials to access the bucket in the instance.[json example of service credential](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials)"
@@ -20,9 +20,6 @@ variable "ibmcloud_cos_configuration" {
   type = object({
     cos_region                  = string
     cos_bucket_name             = string
-    cos_hana_software_path      = string
-    cos_solution_software_path  = string
-    cos_swpm_mp_stack_file_name = string
   })
   default = {
     "cos_region" : "eu-geo",
