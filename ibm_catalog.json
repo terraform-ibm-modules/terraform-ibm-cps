@@ -15,7 +15,7 @@
                     "label": "power",
                     "name": "power",
                     "install_type": "extension",
-                    "working_directory": "solutions/IBM-Cloud-Pak-System-software",
+                    "working_directory": "solutions/power",
                     "compliance": {},
                     "dependencies": [
                         {
