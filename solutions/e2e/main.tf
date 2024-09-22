@@ -23,8 +23,8 @@ module "ibmcloud_cos_download_cps_binaries" {
   version = "3.0.0"
 
 
-  access_host_or_ip          = "150.240.163.42"
-  target_server_ip           = "10.30.20.5"
+  access_host_or_ip          = "150.240.70.84"
+  target_server_ip           = "150.240.70.84"
   ssh_private_key            = var.ssh_private_key
   ibmcloud_cos_configuration = local.ibmcloud_cos_cps_configuration
 }
@@ -36,7 +36,7 @@ resource "terraform_data" "setup_cps_host" {
     type         = "ssh"
     user         = "root"
     bastion_host = "150.240.163.42"
-    host         = "10.30.20.5"
+    host         = "10.40.10.4"
     private_key  = var.ssh_private_key
     agent        = false
     timeout      = "5m"
@@ -54,7 +54,7 @@ depends_on = [ module.ibmcloud_cos_download_cps_binaries ]
     type         = "ssh"
     user         = "root"
     bastion_host = "150.240.163.42"
-    host         = "10.30.20.5"
+    host         = "10.40.10.4"
     private_key  = var.ssh_private_key
     agent        = false
     timeout      = "3m"
@@ -62,6 +62,9 @@ depends_on = [ module.ibmcloud_cos_download_cps_binaries ]
 
 # Untar installable
   provisioner "remote-exec" {
-    inline = ["pwd","mv /tmp/CPSSW/ipas-software-2.3.5.0-20240912-1539.tgz/ipas-software-2.3.5.0-20240912-1539.tgz /cps-sw-runtime/installable/ipas-software-2.3.5.0-20240912-1539.tgz","cd /cps-sw-runtime/installable","tar -zxvf ipas-software-2.3.5.0-20240912-1539.tgz",]
+   inline = ["pwd",
+             "mv /tmp/CPSSW/ipas-software-2.3.5.0-20240912-1539.tgz/ipas-software-2.3.5.0-20240912-1539.tgz /cps-sw-runtime/installable/ipas-software-2.3.5.0-20240912-1539.tgz",
+             "cd /cps-sw-runtime/installable",
+             "tar -zxvf ipas-software-2.3.5.0-20240912-1539.tgz",]
   }
 }
