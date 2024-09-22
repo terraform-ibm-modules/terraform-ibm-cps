@@ -8,7 +8,7 @@
 This repository contains deployable architecture solutions that help in deploying Power Virtual Server for IBM Cloud Pak System. The solutions are available in the IBM Cloud Catalog and can also be deployed without the catalog, except for a few solutions.
 
 ### IBM catalog solutions that require a Schematics workspace ID of [Power Virtual Server with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global)
-1. [IBM catalog PowerVS SAP Ready variation](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/tree/main/solutions/ibm-catalog/sap-ready-to-go)
+1. [IBM catalog CPS  Ready variation](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/tree/main/solutions/ibm-catalog/sap-ready-to-go)
     - Creates and configures **one HANA instance, zero to several NetWeaver instances, and one optional ShareFS** with **RHEL or SLES OS** distribution. Creates a private subnet for SAP communication for the entire landscape.
     - Optionally configures OS network management services (NTP, NFS, and DNS services) using Ansible Galaxy Collection from [IBM](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/): `power_linux_sap`
     - Additionally tunes the instances according to SAP's best practices, which are fully ready for hosting SAP applications.
@@ -19,11 +19,9 @@ This repository contains deployable architecture solutions that help in deployin
 - [IBM Cloud Pak System Software for POWER](https://github.com/terraform-ibm-modules/terraform-ibm-cps/blob/gayathri-1/images/IBM_Cloud_Pak_System_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg)
 
 ## Solutions
-|                                  Variation                                  | Available on IBM Catalog | Requires Schematics Workspace ID | Creates PowerVS with VPC landing zone | Creates PowerVS HANA Instance | Creates PowerVS NW Instances | Performs PowerVS OS Config | Performs PowerVS SAP Tuning | Install SAP software |
+|                                  Variation                                  | Available on IBM Catalog | Requires Schematics Workspace ID | Creates PowerVS with VPC landing zone | Creates CPS  
 |:---------------------------------------------------------------------------:|:------------------------:|:--------------------------------:|:-------------------------------------:|:-----------------------------:|:----------------------------:|:--------------------------:|:---------------------------:|:--------------------:|
-| [ IBM catalog PowerVS SAP Ready ]( ./solutions/ibm-catalog/sap-ready-to-go/ ) |    :heavy_check_mark:    |        :heavy_check_mark:        |                  N/A                  |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
-| [ IBM catalog SAP S/4HANA or BW/4HANA variation ]( ./solutions/ibm-catalog/sap-s4hana-bw4hana ) |    :heavy_check_mark:    |        :heavy_check_mark:        |                  N/A                  |               1               |            1            |     :heavy_check_mark:     |      :heavy_check_mark:     |          :heavy_check_mark:         |
-|             [ PowerVS SAP Ready ]( ./solutions/sap-ready-to-go/ )             |            N/A           |                N/A               |                  N/A                  |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
+| [ IBM catalog CPS  ]( ./solutions/power// ) |    :heavy_check_mark:    |        :heavy_check_mark:        |                  N/A                  |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
 |                      [ End-to-End ]( ./solutions/e2e/ )                     |            N/A           |                N/A               |           :heavy_check_mark:          |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
 
 
