@@ -1,9 +1,7 @@
 # IBM Cloud Pak System Software on Power VS
 
-[![Graduated (Supported)](https://img.shields.io/badge/status-Graduated%20(Supported)-brightgreen?style=plastic)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-powervs-sap?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/releases/latest)
+[![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-powervs-sap?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-cps/releases/latest)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
 ## Summary
@@ -11,7 +9,7 @@ This repository contains deployable architecture solutions that help in deployin
 
 
 ### IBM catalog solutions that require a Schematics workspace ID of [Power Virtual Server with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global)
-1. [IBM catalog PowerVS SAP Ready variation](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/tree/main/solutions/ibm-catalog/sap-ready-to-go)
+1. [IBM Cloud Pak System Software for POWER variation](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/tree/main/solutions/ibm-catalog/sap-ready-to-go)
     - Creates and configures **one HANA instance, zero to several NetWeaver instances, and one optional ShareFS** with **RHEL or SLES OS** distribution. Creates a private subnet for SAP communication for the entire landscape.
     - Optionally configures OS network management services (NTP, NFS, and DNS services) using Ansible Galaxy Collection from [IBM](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/): `power_linux_sap`
     - Additionally tunes the instances according to SAP's best practices, which are fully ready for hosting SAP applications.
@@ -20,7 +18,7 @@ This repository contains deployable architecture solutions that help in deployin
 
 
 ## Reference architectures
-- [IBM Cloud Pak System Software for POWER](https://github.com/terraform-ibm-modules/terraform-ibm-cps/blob/gayathri-1/images/IBM_Cloud_Pak_System_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg)
+- [IBM Cloud Pak System Software for POWER]([https://github.com/terraform-ibm-modules/terraform-ibm-cps/blob/gayathri-1/images/IBM_Cloud_Pak_System_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg](https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-cps/refs/heads/gayathri-1/reference-architectures/CPS_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg))
 
 
 ## Solutions
