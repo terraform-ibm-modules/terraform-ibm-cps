@@ -4,7 +4,7 @@
             "name": "ibm-cloud-pak-system-software-for-power",
             "label": "IBM Cloud Pak System Software",
             "product_kind": "solution",
-            "tags": ["network", "network_vpc"],
+            "tags": ["POWER", "powervs"],
             "keywords": ["custom", "vpc", "secure"],
             "short_description": "IBM CLoud Pak System Software for POWER platforms.",
             "long_description": "IBM CLoud Pak System Software for POWER platforms.",
@@ -124,7 +124,7 @@
                             {
                                 "diagram": {
                                     "caption": "IBM Cloud Pak System Software for POWER",
-                                    "url": "https://github.com/terraform-ibm-modules/terraform-ibm-cps/blob/gayathri-1/reference-architectures/CPS_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg",
+                                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-cps/refs/heads/gayathri-1/reference-architectures/CPS_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg",
                                     "metadata": []
                                 },
                                 "description": "IBM Cloud Pak System Software for POWER."
