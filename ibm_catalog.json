@@ -6,17 +6,17 @@
             "product_kind": "solution",
             "tags": ["POWER", "powervs"],
             "keywords": ["custom", "vpc", "secure"],
-            "short_description": "IBM CLoud Pak System Software for POWER platforms.",
-            "long_description": "IBM CLoud Pak System Software for POWER platforms.",
-            "offering_docs_url": "https://raw.githubusercontent.com/IBM/customized-deployable-architecture/main/README.md",
+            "short_description": "IBM Cloud Pak System Software for POWER platforms.",
+            "long_description": "IBM Cloud Pak System Software for POWER platforms.",
+            "offering_docs_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-cps/refs/heads/gayathri-1/README.md",
             "offering_icon_url": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PHBhdGggZD0iTTQyMSwzNzYuOGMtNi4yLTE4LjUtMTIuMy0zMC44LTE4LjUtNDkuM2wzMC44LTEyLjNjNi4yLDE4LjUsMTIuMywzMC44LDE4LjUsNDMuMWM2LjIsMCw2LjIsMCwxMi4zLDBjMzcsMCw2MS42LDMwLjgsNjEuNiw2MS42djYuMmM0OS4zLDE4LjUsOTguNSwzNywxNDcuOCw0OS4zYzYuMiwwLDEyLjMsMCwxMi4zLDYuMmMxMi4zLTI0LjYsMzctNDMuMSw2Ny43LTQzLjFjMCwwLDAsMCw2LjIsMGM2LjItMzAuOCwxMi4zLTU1LjQsMTguNS04MGMtNi4yLDAtMTIuMywwLTEyLjMsMGMtMTIuMywwLTE4LjUsMC0zMC44LDBjMC02LjItNDkuMy0xODQuNy0yNDAuMi0xODQuN2MtMTIuMywwLTMwLjgsMC00My4xLDBjLTk4LjUsMTguNS0xNTMuOSw2MS42LTE3OC42LDEwNC43QzMyMi40LDMxNS4zLDM3MS43LDM1Mi4yLDQyMSwzNzYuOEw0MjEsMzc2LjhMNDIxLDM3Ni44eiBNMzY1LjUsMjIyLjlsMzAuOC02LjJjNi4yLDE4LjUsMTIuMywzMC44LDE4LjUsNDkuM0wzODQsMjc4LjNDMzc3LjgsMjU5LjgsMzcxLjcsMjQxLjMsMzY1LjUsMjIyLjlMMzY1LjUsMjIyLjl6IE02MDUuNyw3MDkuM2MwLTMwLjgsMjQuNi00OS4zLDQ5LjMtNDkuM2M2LjIsMCw2LjIsMCwxMi4zLDBjMTguNS0zMC44LDMwLjgtNTUuNCw0My4xLTg2LjJjLTE4LjUtMTIuMy0zMC44LTM3LTMwLjgtNjEuNmMtNi4yLDAtMTIuMywwLTE4LjUtNi4yYy00OS4zLTEyLjMtOTguNS0zMC44LTE1My45LTQ5LjNjLTYuMiwxOC41LTI0LjYsMjQuNi00My4xLDI0LjZjLTM3LDAtNjEuNi0zMC44LTYxLjYtNjEuNmMwLTYuMiwwLTEyLjMsMC0xMi4zYy00OS4zLTMwLjgtOTIuMy02MS42LTE0MS42LTk4LjVjLTE4LjUsNTUuNC0xMi4zLDk4LjUtMTIuMywxMDQuN2MwLDAtMjAzLjIsMTIuMy0yMzQsMTYwLjFjLTM3LDE4NC43LDE2MC4xLDI1Mi41LDIyNy44LDI1Mi41SDUzOGMzMC44LTI0LjYsNTUuNC01NS40LDczLjktODYuMkM2MTEuOSw3MzQsNjA1LjcsNzIxLjcsNjA1LjcsNzA5LjNMNjA1LjcsNzA5LjN6IE01MzEuOCw1NjcuN2MtMTIuMy0xMi4zLTI0LjYtMzAuOC0zMC44LTQzLjFsMjQuNi0xOC41YzYuMiwxMi4zLDE4LjUsMzAuOCwzMC44LDQzLjFMNTMxLjgsNTY3Ljd6IE01NjIuNiw2MTAuOGwyNC42LTE4LjVjMTIuMywxMi4zLDE4LjUsMzAuOCwzMC44LDQzLjFsLTI0LjYsMTguNUM1ODEsNjQxLjYsNTY4LjcsNjI5LjMsNTYyLjYsNjEwLjh6IE05ODcuNSw1NTUuNGMtNDMuMSwwLTEwNC43LTYuMi0xNjYuMy0xMi4zYy0xMi4zLDI0LjYtMzcsNDMuMS02Ny43LDQzLjFoLTYuMmMtMTIuMywzMC44LTMwLjgsNjEuNi00My4xLDkyLjNjNi4yLDYuMiwxMi4zLDE4LjUsMTIuMywzMC44YzAsMzAuOC0yNC42LDQ5LjMtNDkuMyw0OS4zYy02LjIsMC0xMi4zLDAtMTIuMywwYy0xOC41LDI0LjYtMzcsNDMuMS01NS40LDY3LjdoMTQ3LjhjNi4yLDAsMTYwLjEsMCwyMzQtMTQxLjZDOTg3LjUsNjQxLjYsOTkzLjYsNTk4LjUsOTg3LjUsNTU1LjRMOTg3LjUsNTU1LjR6IE03MzUsODIwLjJjLTEyLjMtMTIuMy0yNC42LTI0LjYtMzctMzdsMjQuNi0yNC42YzEyLjMsMTIuMywyNC42LDI0LjYsMzcsMzdMNzM1LDgyMC4yeiBNODI3LjMsNTEyLjNjNjEuNiw2LjIsMTEwLjgsMTIuMywxNTMuOSwxMi4zYy0xOC41LTgwLTgwLTE0MS42LTE3Mi40LTE2MC4xYy02LjIsMjQuNi0xMi4zLDU1LjQtMTguNSw4Ni4yQzgwOC45LDQ2Myw4MjEuMiw0ODEuNSw4MjcuMyw1MTIuM0w4MjcuMyw1MTIuM3oiLz48L2c+DQo8L3N2Zz4=",
             "module_info": {
                 "works_with": [
                     {
                         "catalog_id": "2240491a-0526-4d08-84c7-abcac355de6f",
-                        "name": "custom-apache",
+                        "name": "CPS",
                         "kind": "terraform",
-                        "version": "0.0.52",
+                        "version": "1.0.0",
                         "flavor": "standard"
                     }
                 ]
@@ -27,7 +27,7 @@
                     "label": "IBM CLoud Pak System Software for POWER",
                     "name": "ibm-cloud-pak-system-software-for-power",
                     "install_type": "extenstion",
-                    "working_directory": "solutions/e2e",
+                    "working_directory": "solutions/CPS_POWER",
                     "usage_template": "module \"custom_arch\" {\n    source           = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source//${{workingDirectory}}?archive=tgz&catalogID=${{catalogID}}&flavor=${{flavor}}&kind=${{kind}}&name=${{name}}&version=${{version}}\"\n    prefix           = var.prefix\n    ssh_key          = var.ssh_key\n    ibmcloud_api_key = var.ibmcloud_api_key\n}\n\n",
                     "compliance": {
                         "authority": "scc-v3",
@@ -47,20 +47,42 @@
                             }
                         ]
                     },
-                    "configuration": [
+                    "configuration":[
                         {
-                            "key": "ssh_key",
-                            "required": true
+                            "key": "prerequisite_workspace_id",
+                            "required": true,
+                            "custom_config": {
+                                "config_constraints": {
+                                    "catalogID": "2240491a-0526-4d08-84c7-abcac355de6f",
+                                    "offeringID": "da361b3b-4f9f-4d23-9d3b-1836b6c4cbb9",
+                                    "versionConstraint": ">=5.0.0"
+                                },
+                                "grouping": "deployment",
+                                "original_grouping": "deployment",
+                                "type": "schematics_workspace"
+                            }
+                        },
+                        {
+                            "key": "ssh_private_key",
+                            "type": "multiline_secure_value",
+                            "display_name": "Multiline secure value",
+                            "required": true,
+                            "custom_config": {
+                                "grouping": "deployment",
+                                "original_grouping": "deployment",
+                                "type": "multiline_secure_value"
+                            }
                         },
                         {
                             "key": "ibmcloud_api_key",
+                            "type": "multiline_secure_value",
+                            "display_name": "Multiline secure value",
                             "required": true,
-                            "type": "password"
-                        },
-                        {
-                            "key": "prefix",
-                            "required": true,
-                            "type": "string"
+                            "custom_config": {
+                                "grouping": "deployment",
+                                "original_grouping": "deployment",
+                                "type": "multiline_secure_value"
+                            }
                         }
                     ],
                     "outputs": [
