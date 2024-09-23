@@ -116,7 +116,7 @@
                             {
                                 "diagram": {
                                     "caption": "Full CPS environment provisioned on a 'Power Virtual Server with VPC landing zone'",
-                                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-cps/refs/heads/gaya[…]tware_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg",
+                                    "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-cps/refs/heads/bincy-1/reference-architectures/CPS_Software_for_POWER/deploy-arch-ibm-CPS-pvs-inf-standard.svg",
                                     "type": "image/svg+xml"
                                 },
                                 "description": "'CPS on PowerVS' variation of 'Power Virtual Server for CPS' creates a basic and expandable CPS system landscape builds on the foundation of the 'Power Virtual Server with VPC landing zone'."
