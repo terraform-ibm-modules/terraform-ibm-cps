@@ -20,10 +20,13 @@ variable "ibmcloud_cos_configuration" {
   type = object({
     cos_region      = string
     cos_bucket_name = string
+    cos_solution_software_path = string
   })
   default = {
-    "cos_region" : "eu-geo",
-    "cos_bucket_name" : "powervs-automation",
+    "cos_region" : "us-south",
+    "cos_bucket_name" : "cps-test-1",
+    "cos_solution_software_path" : "TEST/common-utils.py",
+
   }
 }
 

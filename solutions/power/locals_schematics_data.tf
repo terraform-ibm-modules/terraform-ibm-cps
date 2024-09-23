@@ -19,7 +19,6 @@ data "ibm_schematics_output" "schematics_output" {
 
 locals {
   powervs_infrastructure = jsondecode(data.ibm_schematics_output.schematics_output.output_json)
-
   powervs_workspace_guid  = local.powervs_infrastructure[0].powervs_workspace_guid.value
   powervs_sshkey_name     = local.powervs_infrastructure[0].powervs_ssh_public_key.value.name
   powervs_images          = local.powervs_infrastructure[0].powervs_images.value
