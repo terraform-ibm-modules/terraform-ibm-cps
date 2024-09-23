@@ -20,7 +20,7 @@ This repository contains deployable architecture solutions that help in deployin
 
 
 ## Solutions
-|                                  Variation                                  | Available on IBM Catalog | Requires Schematics Workspace ID | Creates PowerVS with VPC landing zone | Creates PowerVS HANA Instance | Creates PowerVS NW Instances | Performs PowerVS OS Config | Performs PowerVS SAP Tuning | Install SAP software |
+|                                  Variation                                  | Available on IBM Catalog | Requires Schematics Workspace ID | Creates PowerVS with VPC landing zone | Creates CPS Instance | Creates PowerVS NW Instances | Performs CPS OS Config | Performs CPS Tuning | Install CPS software |
 |:---------------------------------------------------------------------------:|:------------------------:|:--------------------------------:|:-------------------------------------:|:-----------------------------:|:----------------------------:|:--------------------------:|:---------------------------:|:--------------------:|
 | [ IBM Cloud Pak System for Power ]( ./solutions/ibm-catalog/sap-ready-to-go/ ) |    :heavy_check_mark:    |        :heavy_check_mark:        |                  N/A                  |               1               |            0 to N            |     :heavy_check_mark:     |      :heavy_check_mark:     |          N/A         |
 
