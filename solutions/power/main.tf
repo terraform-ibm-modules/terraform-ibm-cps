@@ -15,7 +15,7 @@ locals {
     cos_resource_instance_id = local.cos_resource_instance_id
     cos_bucket_name          = var.ibmcloud_cos_configuration.cos_bucket_name
     cos_dir_name             = var.ibmcloud_cos_configuration.cos_solution_software_path
-    download_dir_path        = local.network_services_config.nfs.nfs_client_path
+    download_dir_path        = "/tmp"
   }
 }
 module "ibmcloud_cos_download_cps_binaries" {
@@ -63,7 +63,19 @@ depends_on = [ module.ibmcloud_cos_download_cps_binaries ]
   }
 
 # Untar installable
-  provisioner "remote-exec" {
-    inline = ["pwd","mv /tmp/CPSSW/ipas-software-2.3.5.0-20240912-1539.tgz/ipas-software-2.3.5.0-20240912-1539.tgz /cps-sw-runtime/installable/ipas-software-2.3.5.0-20240912-1539.tgz","cd /cps-sw-runtime/installable","tar -zxvf ipas-software-2.3.5.0-20240912-1539.tgz",]
+provisioner "remote-exec" {
+   inline = ["pwd",
+             "mv /tmp/CPSSW/CPSBINARIES.zip /cps-sw-runtime/installable/CPSBINARIES.zip",
+             "cd /cps-sw-runtime/installable/CPSBINARIES.zip",
+             "unzip CPSBINARIES.zip",
+             "cd /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES",
+             "tar -zxvf ipas-software-2.3.5.0-20240912-1539.tgz",
+             "sh prereq.sh",
+             "sed -i 's/INSTALLATION_UNIQUE_NAME=/INSTALLATION_UNIQUE_NAME=cps2350/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
+             "sed -i 's/ADMINISTRATOR_LOGIN=/ADMINISTRATOR_LOGIN=admin/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
+             "sed -i 's/ADMINISTRATOR_PASSWORD=/ADMINISTRATOR_PASSWORD=passw0rd/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
+             "sed -i 's/INSTALLATION_TYPE=/INSTALLATION_TYPE=software_power/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
+             "sed -i 's/FIREWALL_ON_CUSTOM_SETUP_FOUND=/FIREWALL_ON_CUSTOM_SETUP_FOUND=overwrite/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
+             "sh install.sh -s /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file"]
   }
 }

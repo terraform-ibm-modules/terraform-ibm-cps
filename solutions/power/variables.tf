@@ -25,7 +25,7 @@ variable "ibmcloud_cos_configuration" {
   default = {
     "cos_region" : "us-south",
     "cos_bucket_name" : "cps-test-1",
-    "cos_solution_software_path" : "TEST/common-utils.py",
+    "cos_solution_software_path" : "CPSSW/ipas-software-2.3.5.0-20240912-1539.tgz",
 
   }
 }
