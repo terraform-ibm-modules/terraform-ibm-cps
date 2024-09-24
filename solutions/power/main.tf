@@ -76,7 +76,7 @@ provisioner "remote-exec" {
              "sed -i 's/ADMINISTRATOR_PASSWORD=/ADMINISTRATOR_PASSWORD=passw0rd/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
              "sed -i 's/INSTALLATION_TYPE=/INSTALLATION_TYPE=software_power/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
              "sed -i 's/FIREWALL_ON_CUSTOM_SETUP_FOUND=/FIREWALL_ON_CUSTOM_SETUP_FOUND=overwrite/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file",
-             "sed -i 's/yum -y install ${IPAS_RPM}/yum -y install --nogpgcheck ${IPAS_RPM}/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/install.sh",
+             "sed -i 's/'yum -y install ${IPAS_RPM}'/'yum -y install --nogpgcheck ${IPAS_RPM}'/g' /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/install.sh",
              "sh install.sh -s /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file"]
   }
 }
