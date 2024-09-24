@@ -64,9 +64,12 @@ depends_on = [ module.ibmcloud_cos_download_cps_binaries ]
   provisioner "remote-exec" {
    inline = ["pwd",
              "mv /tmp/CPSBINARIES/CPSBINARIES.zip /cps-sw-runtime/installable/CPSBINARIES.zip",
-             "cd /cps-sw-runtime/installable/",
+             "cd /cps-sw-runtime/installable/CPSBINARIES.zip",
              "unzip CPSBINARIES.zip",
-              "cd /cps-sw-runtime/installable/CPSBINARIES",
-             "tar -zxvf ipas-software-2.3.5.0-20240912-1539.tgz",]
+              "cd /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES",
+             "tar -zxvf ipas-software-2.3.5.0-20240912-1539.tgz",
+             "sh prereq.sh",
+             "sh update_responsefile.sh",
+             "sh install.sh -s /cps-sw-runtime/installable/CPSBINARIES.zip/CPSBINARIES/samples/software_response_file"]
   }
 }

@@ -32,10 +32,9 @@ variable "ibmcloud_cos_configuration" {
 
 variable "transit_gateway_global" {
   description = "Connect to the networks outside the associated region."
-  type        = bool
+  type        = string
   default     = false
 }
-
 
 #####################################################
 # Optional Parameters VSI OS Management Services
