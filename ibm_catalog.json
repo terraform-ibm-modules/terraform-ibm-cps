@@ -39,7 +39,6 @@
                             "id": "2dd486c7-b317-4aaa-907b-42671485ad96-global",
                             "name": "CPS Software for Power",
                             "install_type": "extension",
-                             "working_directory": "solutions/CPS_POWER",
                             "optional": true,
                             "version": ">=5.0.0"
                         }
