@@ -7,7 +7,9 @@
             "product_kind": "solution",
             "tags": ["POWER", "powervs"],
             "keywords": ["custom", "vpc", "secure"],
-            "short_description": "IBM Cloud Pak System Software for POWER platforms",
+            "short_description": "IBM Cloud Pak System Software for POWER platforms.",
+            "long_description": "IBM Cloud Pak System Software for POWER platforms.",
+            "offering_docs_url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-cps/refs/heads/gayathri-1/README.md",
             "provider_name": "Community",
             "module_info": {
                 "works_with": [
@@ -26,7 +28,7 @@
                     "label": "IBM Cloud Pak System Software for POWER",
                     "name": "power",
                     "install_type": "extension",
-                    "working_directory": "solutions/power",
+                    "working_directory": "solutions/CPS_POWER",
                     "compliance": {},
                     "dependencies": [
                         {
