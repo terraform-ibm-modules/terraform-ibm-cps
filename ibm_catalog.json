@@ -9,6 +9,18 @@
             "keywords": ["custom", "vpc", "secure"],
             "short_description": "IBM Cloud Pak System Software for POWER platforms",
             "provider_name": "Community",
+            "module_info": {
+                "works_with": [
+                    {
+                        "catalog_id": "2240491a-0526-4d08-84c7-abcac355de6f",
+                        "name": "CPS",
+                        "kind": "terraform",
+                        "version": "1.0.0",
+                        "flavor": "standard"
+                    }
+                ]
+            },
+            "support_details": "This is a demonstration and no official support is given.",
             "flavors": [
                 {
                     "label": "IBM Cloud Pak System Software for POWER",
