@@ -5,7 +5,7 @@
             "name": "IBM_Cloud_Pak_System_Software",
             "version": "1.0.0",
             "product_kind": "solution",
-            "tags": ["POWER", "powervs", enterprise_app],
+            "tags": ["POWER", "powervs"],
             "keywords": ["custom", "vpc", "secure"],
             "short_description": "IBM Cloud Pak System Software for POWER platforms",
             "provider_name": "Community",
