@@ -24,9 +24,6 @@ related_links:
   - title: 'Reference architecture for "CPS Software on IBM PowerVS" as full stack deployment'
     url: 'https://cloud.ibm.com/docs/deployable-reference-architectures?topic=deployable-reference-architectures-deploy-arch-ibm-pvs-inf-full-stack'
     description: 'Reference architecture for "Power Virtual Server with VPC landing zone" as full stack deployment'
-  - title: 'Reference architecture for "Power Virtual Server with VPC landing zone" as extension of existing deployment'
-    url: 'https://cloud.ibm.com/docs/deployable-reference-architectures?topic=deployable-reference-architectures-deploy-arch-ibm-pvs-inf-extension'
-    description: 'Reference architecture for "Power Virtual Server with VPC landing zone" as extension of existing deployment'
 
 ---
 
