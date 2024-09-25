@@ -23,8 +23,8 @@ module "ibmcloud_cos_download_cps_binaries" {
   version = "3.0.0"
 
 
-  access_host_or_ip          = "150.240.70.84"
-  target_server_ip           = "150.240.70.84"
+  access_host_or_ip          = local.access_host_or_ip
+  target_server_ip           = local.ansible_host_or_ip
   ssh_private_key            = var.ssh_private_key
   ibmcloud_cos_configuration = local.ibmcloud_cos_cps_configuration
 }
@@ -35,8 +35,8 @@ resource "terraform_data" "setup_cps_host" {
   connection {
     type         = "ssh"
     user         = "root"
-    bastion_host = "150.240.163.42"
-    host         = "10.40.10.4"
+    bastion_host = local.access_host_or_ip
+    host         = local.ansible_host_or_ip
     private_key  = var.ssh_private_key
     agent        = false
     timeout      = "5m"
@@ -53,8 +53,8 @@ depends_on = [ module.ibmcloud_cos_download_cps_binaries ]
   connection {
     type         = "ssh"
     user         = "root"
-    bastion_host = "150.240.163.42"
-    host         = "10.40.10.4"
+    bastion_host = local.access_host_or_ip
+    host         = local.ansible_host_or_ip
     private_key  = var.ssh_private_key
     agent        = false
     timeout      = "3m"
@@ -67,9 +67,9 @@ depends_on = [ module.ibmcloud_cos_download_cps_binaries ]
              "cd /cps-sw-runtime/installable/",
              "unzip CPSBINARIES.zip",
              "cd /cps-sw-runtime/installable/CPSBINARIES",
-             "tar -zxvf ipas-software-2.3.5.0-20240912-1539.tgz",
-             #"sh prereq.sh",
-             "sed -i 's/yum -y install $${IPAS_RPM}/yum -y install --nogpgcheck $${IPAS_RPM}/g' /cps-sw-runtime/installable/CPSBINARIES/install.sh",
+             "tar -zxvf ipas-software-2.3.5.0-20240925-0620.tgz",
+             "sh prereq.sh",
+             #"sed -i 's/yum -y install $${IPAS_RPM}/yum -y install --nogpgcheck $${IPAS_RPM}/g' /cps-sw-runtime/installable/CPSBINARIES/install.sh",
              "sed -i 's/INSTALLATION_UNIQUE_NAME=/INSTALLATION_UNIQUE_NAME=cps2350/g' /cps-sw-runtime/installable/CPSBINARIES/samples/software_response_file",
              "sed -i 's/ADMINISTRATOR_LOGIN=/ADMINISTRATOR_LOGIN=admin/g' /cps-sw-runtime/installable/CPSBINARIES/samples/software_response_file",
              "sed -i 's/ADMINISTRATOR_PASSWORD=/ADMINISTRATOR_PASSWORD=passw0rd/g' /cps-sw-runtime/installable/CPSBINARIES/samples/software_response_file",
